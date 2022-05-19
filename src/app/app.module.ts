@@ -14,13 +14,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    TodoComponent
+    TodoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

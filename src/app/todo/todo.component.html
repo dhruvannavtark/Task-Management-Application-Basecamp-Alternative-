@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="col-md-9" style="background-color: #030303;">
-            <div class="cdkDropListGroup mt-5">
+            <div cdkDropListGroup class="mt-5">
                 <div class="row">
                     <div class="col-md-4">
                         <!-- Todo Part -->
@@ -48,12 +48,12 @@
                             <div cdkDropList [cdkDropListData]="inprogress" class="example-list"
                                 (cdkDropListDropped)="drop($event)">
                                 <div class="example-box" *ngFor="let item of inprogress; let i = index" cdkDrag>
-                                    {{item.description}
+                                    {{item.description}}
                                     <div class="box">
                                         <button mat-icon-button="warn" (click)="deleteTaskInProgress(i)">
                                             <mat-icon>delete</mat-icon>
                                         </button>
-                                        <button mat-icon-button="warn" (click)="deleteTaskInProgress(i)">
+                                        <button mat-icon-button="warn" (click)="onEdit(item,i)">
                                             <mat-icon>edit</mat-icon>
                                         </button>
                                     </div>
@@ -68,7 +68,7 @@
 
                             <div cdkDropList [cdkDropListData]="done" class="example-list"
                                 (cdkDropListDropped)="drop($event)">
-                                <div class="example-box" *ngFor="let item of done" cdkDrag>{{item.description}</div>
+                                <div class="example-box" *ngFor="let item of done" cdkDrag>{{item.description}}</div>
                             </div>
                         </div>
                     </div>
