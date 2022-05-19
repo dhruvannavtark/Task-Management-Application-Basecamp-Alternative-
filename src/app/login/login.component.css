@@ -11,7 +11,7 @@
     color: gray;
     position: relative;
     z-index: 0;
-    padding: 0;
+    padding: 0; 
 }
 
 .ftco-section:after {
